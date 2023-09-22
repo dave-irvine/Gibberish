@@ -1,6 +1,8 @@
 -- help function to fine some number / tier in a skill name
 function CheckingSkillNameForNumber(skillName)
-
+    if skillName == nil then
+        return ""
+    end
     local start_tier, end_tier = string.find(skillName, "%d+")
     
     if start_tier ~= nil then
